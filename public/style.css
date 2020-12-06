@@ -1,0 +1,28 @@
+body{
+    background-color:  rgb(211, 206, 138);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: black;
+    padding: 25px;
+   
+    text-align: center;
+}
+
+.search{
+    text-align: center; 
+    padding-top: 20px;
+}
+
+.container{
+    margin-left: 55px;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
