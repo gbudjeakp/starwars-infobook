@@ -1,15 +1,13 @@
 import React from 'react'
 
-const Content = ({ people, isLoading }) => {
-  return isLoading ? (
-    <h1>Loading...</h1>
-  ) : (
-    <section className='cards'>
-      {people.map((person) => (
+function Content (props) {
+  props.name.map((person, i) => {
+    return (
+      <div key={i}>
         <h4>{person.name}</h4>
-      ))}
-    </section>
-  )
+      </div>
+    )
+  })
 }
 
 export default Content

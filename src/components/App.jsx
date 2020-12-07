@@ -11,7 +11,6 @@ function App () {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios.get(url)
-      console.log(result)
       setPeople(result.data)
       setisLoading(false)
     }
@@ -19,21 +18,11 @@ function App () {
     fetchData()
   }, [])
 
-  // const url = 'https://swapi.dev/api/'
-  // axios.get(url)
-  //   .then(res => res.json() {
-  //     console.log(res.data)
-  //   })
-  //   .catch(err => {
-  //     console.log(err)
-  //   })
-
   return (
     <div>
       <Header />
-      <Content isLoading={isLoading} people={people} />
+      <Content isLoading={isLoading} data={people} />
     </div>
-
   )
 }
 
