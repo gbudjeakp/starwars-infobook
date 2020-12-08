@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Header from '../components/Header'
-import Content from './Content'
+import Content from './People'
 
 function App () {
   const [people, setPeople] = useState([])
@@ -10,8 +10,8 @@ function App () {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios.get(url)
-      setPeople(result.data)
+      const res = await axios.get(url)
+      setPeople(res.data.results)
       setisLoading(false)
     }
 
@@ -21,7 +21,7 @@ function App () {
   return (
     <div>
       <Header />
-      <Content isLoading={isLoading} data={people} />
+      <Content isLoading={isLoading} people={people} />
     </div>
   )
 }
