@@ -7,10 +7,6 @@ function Header () {
       <nav>
         <img src={logo} alt='logo' width='100' className='logo' />
       </nav>
-
-      <div className='search'>
-        <input placeholder='search' type='text' />
-      </div>
     </div>
   )
 }

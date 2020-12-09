@@ -12,12 +12,12 @@ function App () {
     const fetchData = async () => {
       const res = await axios.get(url)
       setPeople(res.data.results)
-      console.log(res.data.result)
       setisLoading(false)
     }
     fetchData()
   }, [])
 
+  console.log(people)
   return (
     <div>
       <Header />
@@ -25,5 +25,4 @@ function App () {
     </div>
   )
 }
-
 export default App
