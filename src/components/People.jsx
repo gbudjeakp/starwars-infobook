@@ -1,19 +1,20 @@
 import React from 'react'
+import loading from '../img/loading.gif'
 
 function Content ({ people, isLoading }) {
-  return isLoading ? <h1>Loading...</h1>
+  return isLoading ? <img src={loading} alt='logo' className='center-loading' />
     : (
       <div>
-        <section className='container'>
+        <div className='container'>
           {people.map(person => (
-            <div key={person.name}>
+            <div key={person.name} className='card'>
               <h1>Character</h1>
               <h4>{person.name}</h4>
               <h1>height</h1>
               <h4>{person.height}</h4>
             </div>
           ))}
-        </section>
+        </div>
       </div>)
 }
 

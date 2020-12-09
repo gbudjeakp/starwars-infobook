@@ -12,7 +12,7 @@ function App () {
     const fetchData = async () => {
       const res = await axios.get(url)
       setPeople(res.data.results)
-      console.log(res.data.results)
+      console.log(res.data.result)
       setisLoading(false)
     }
 
