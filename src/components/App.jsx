@@ -15,7 +15,6 @@ function App () {
       console.log(res.data.result)
       setisLoading(false)
     }
-
     fetchData()
   }, [])
 

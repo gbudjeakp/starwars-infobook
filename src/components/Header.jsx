@@ -5,18 +5,11 @@ function Header () {
   return (
     <div>
       <nav>
-
-        <div>
-          <a href='#'>Starships</a>
-          <a href='#'>Planets</a>
-          <a href='#'>Species</a>
-        </div>
-
         <img src={logo} alt='logo' width='100' className='logo' />
       </nav>
 
       <div className='search'>
-        <input placeholder='search' />
+        <input placeholder='search' type='text' />
       </div>
     </div>
   )
