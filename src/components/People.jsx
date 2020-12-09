@@ -7,7 +7,7 @@ function Content ({ people, isLoading }) {
       <div>
         <div className='container'>
           {people.map(person => (
-            <div key={person.name} className='card'>
+            <div key={person.id} className='card'>
               <h1>Name:</h1>
               <h4>{person.name}</h4>
               <h1>height:</h1>
